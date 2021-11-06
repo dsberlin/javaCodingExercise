@@ -9,7 +9,7 @@ public class Exercise {
         for (int num : arr) {
             if (num > val){
                 above++;
-            }else if (num < val){
+            } else if (num < val){
                 below++;
             }
         }
@@ -23,9 +23,9 @@ public class Exercise {
     }
 
     public String stringRotation(String str, int rotate){
-        if(rotate < 0){
+        if (rotate < 0){
             throw new ArithmeticException("Rotation amount must be positive");
-        }else {
+        } else {
             rotate = str.length() - (rotate % str.length());
 
             String end = str.substring(rotate);
