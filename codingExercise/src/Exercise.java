@@ -2,6 +2,12 @@ import java.util.HashMap;
 
 public class Exercise {
 
+    /**
+     *
+     * @param arr   Array of Integers
+     * @param val   Comparison value
+     * @return      Hashmap of number of above and below values
+     */
     public HashMap<String, Integer> aboveBelow(int[] arr, int val){
         int above = 0;
         int below = 0;
@@ -22,6 +28,12 @@ public class Exercise {
         return output;
     }
 
+    /**
+     *
+     * @param str       String to be Rotated
+     * @param rotate    Rotation amount
+     * @return          Rotated String
+     */
     public String stringRotation(String str, int rotate){
         if (rotate < 0){
             throw new ArithmeticException("Rotation amount must be positive");
