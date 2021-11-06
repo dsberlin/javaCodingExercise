@@ -14,11 +14,24 @@ public class Exercise {
             }
         }
 
-        HashMap<String, Integer> output = new  HashMap<>();
+        HashMap<String, Integer> output = new HashMap<>();
 
         output.put("above", above);
-        output.put("bellow", below);
+        output.put("below", below);
 
         return output;
+    }
+
+    public String stringRotation(String str, int rotate){
+        if(rotate < 0){
+            throw new ArithmeticException("Rotation amount must be positive");
+        }else {
+            rotate = str.length() - (rotate % str.length());
+
+            String end = str.substring(rotate);
+            String start = str.substring(0, rotate);
+
+            return end + start;
+        }
     }
 }
